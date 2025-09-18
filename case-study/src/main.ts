@@ -5,6 +5,7 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
+    app.enableCors();
     app.useGlobalPipes(
         new ValidationPipe({ whitelist: true, transform: true, transformOptions: { enableImplicitConversion: true } }),
     );
@@ -20,7 +21,7 @@ async function bootstrap() {
 
     const host = process.env.HOST || 'localhost';
     const port = process.env.PORT || 4000;
-
+    console.log(process.env.SECRET_JWT, 'asad');
     await app.listen(port as number, host);
     console.info(`Server running on ${host}:${port}`);
 }
