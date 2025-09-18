@@ -4,7 +4,7 @@ import { IUser } from 'src/constants/IUser';
 import { JwtService } from '@nestjs/jwt';
 import { Role } from 'src/constants/role';
 
-const users: IUser[] = [
+export const USERS: IUser[] = [
     { id: 1, name: 'John', email: 'john@example.com', role: Role.ADMIN },
     { id: 2, name: 'Jane', email: 'jane@example.com', role: Role.USER },
     { id: 3, name: 'Bob', email: 'bob@example.com', role: Role.USER },
@@ -15,7 +15,7 @@ export class AuthService {
     constructor(private jwtService: JwtService) {}
 
     validateUser(email: string, password: string): IUser {
-        const user = users.find((user) => user.email === email);
+        const user = USERS.find((user) => user.email === email);
         if (!user) throw new UnauthorizedException();
 
         return user;
