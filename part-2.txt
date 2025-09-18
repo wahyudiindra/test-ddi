@@ -1,0 +1,12 @@
+(1) - Kalau `==` hanya membandingkan nilai tanpa memperdulikan tipe datanya. Sedangkan `===` membandingkan nilai beserta tipe datanya.
+    - Berikut contohnya:
+        1 == "1", akan menghasilkan nilai `true`
+        1 === "1", akan menghasilkan nilai `false`, dikarenakan tipe data dari kedua data tersebut berbeda
+
+(2) Hoisting adalah pre-processing yang dilakukan engine sebelum kode dieksekusi. Berfungsi untuk memanggil function atau variable sebelum dideklarasikan.
+    Berikut ini merupakan penjelasan untuk hoisting pada variable dan function:
+    - var, akan menampilkan hasil `undefined`
+    - let dan const, akan menampilkan `reference error`
+    - function, akan menampilkan hasil yang sama dengan pemanggilan function setelah deklarasi. Tapi kalo arrow function akan menampilkan `reference error`
+
+(3) source code ada di file debounce.ts
