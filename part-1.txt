@@ -1,0 +1,11 @@
+(1)     C. Object
+(2)     C. Variabel let memiliki block scope
+        D. Variabel const harus diinisialisasi saat deklarasi 
+(3)     D. ReferenceError
+(4)     C. map()
+(5)     B. undefined
+(6)     A. Promise hanya bisa memiliki satu state: pending, fulfilled, atau rejected
+(7)     C. 1, 4, 3, 2
+(8)     B. Array
+(9)     A. 10
+(10)    C. Arrow function tidak memiliki this sendiri
